@@ -5,28 +5,35 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <title>ALL THE FOOTBALL</title>
   <link rel="stylesheet" href="index.css" />
-  <!-- <link href="https://fonts.googleapis.com/css?family=Maiden+Orange|Stylish&display=swap" rel="stylesheet"> -->
 </head>
 <body class='atf-site'>
 
   <header class='atf-main-header'>All The Football</header>
-  <div class='atf-page'>
-    <p id='rumour'>Consulting reliable sources...</p>
-  </div>
+  <main class='atf-page'>
+    <div class='rumour-flex-container'>
+      <p id='rumour' class='rumour-element'>Consulting reliable sources...</p>
+      <button onclick="getRumour()" class='rumour-element'>Next Rumour</button>
+    </div>
+  </main>
 
   <footer class='footer-flex-container'>
-    <div class='footer-element'>v0.0.1 - under construction</div>
+    <div class='footer-element'>v0.0.1<span class='version-description'> - early beta</span></div>
     <div class='footer-element'>Copyright (c) 2019 Nick Holvast</div>
     <div class='footer-element'><a href='https://github.com/aNerdInTheHand/allthefootball/issues' target='_blank' rel='noopener noreferrer'>Report a bug</a></div>
   </footer>
 
   <script type="text/javascript">
-    fetch('https://5u4qqqhcm5.execute-api.eu-west-1.amazonaws.com/test/rumour')
-      .then(response => {
-        response.json()
-          .then(jsonr => document.getElementById('rumour').innerHTML = jsonr.body)
-      })
-      .catch(err => console.error(err))
+    function getRumour () {
+      fetch('https://5u4qqqhcm5.execute-api.eu-west-1.amazonaws.com/beta/rumour')
+        .then(response => {
+          response.json()
+            .then(jsonr => document.getElementById('rumour').innerHTML = JSON.parse(jsonr.body).replace(/"/g, "'"))
+        })
+        .catch(err => console.error(err))
+      };
+    (function () {
+      getRumour()
+    })()
   </script>
   <script>
     WebFontConfig = {google: {families: ['Maiden Orange','Stylish']}};
