@@ -1,11 +1,11 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <title>ALL THE FOOTBALL</title>
   <link rel="stylesheet" href="index.css" />
-  <link href="https://fonts.googleapis.com/css?family=Maiden+Orange|Stylish&display=swap" rel="stylesheet">
+  <!-- <link href="https://fonts.googleapis.com/css?family=Maiden+Orange|Stylish&display=swap" rel="stylesheet"> -->
 </head>
 <body class='atf-site'>
 
@@ -28,5 +28,17 @@
       })
       .catch(err => console.error(err))
   </script>
+  <script>
+    WebFontConfig = {google: {families: ['Maiden Orange','Stylish']}};
+    (function(d) {
+        var wf = d.createElement('script'), s = d.scripts[0]
+        wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+          '://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js'
+        wf.type = 'text/javascript'
+        wf.async = 'true'
+        var s = document.getElementsByTagName('script')[0]
+        s.parentNode.insertBefore(wf, s)
+        })(document)
+    </script>
 </body>
 </html>
