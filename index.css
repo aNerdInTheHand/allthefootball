@@ -1,7 +1,23 @@
+.atf-site {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Maiden Orange', cursive;
+  min-height: 98vh;
+}
+
+.atf-page {
+  display: flex;
+  flex: 1;
+  font-family: 'Stylish', sans-serif;
+  font-size: 1.5rem;
+  justify-content: center;
+}
+
 .atf-main-header {
   align-items: center;
   color: black;
   display: flex;
+  font-size: 2rem;
   padding-bottom: 1rem;
   padding-top: 0.5rem;
   width: 100%;
@@ -15,4 +31,13 @@
   flex: 1;
   height: .2em;
   margin: .2em;
+}
+
+.footer-flex-container {
+  display: flex;
+  justify-content: center;
+}
+
+.footer-element {
+  flex-grow: 1;
 }
