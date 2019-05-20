@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>ALL THE FOOTBALL</title>
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+
+  <h1 class='atf-main-header'>All The Football</h1>
+  <p id='rumour'>Consulting reliable sources...</p>
+
+  <script type="text/javascript">
+    fetch('https://5u4qqqhcm5.execute-api.eu-west-1.amazonaws.com/test/rumour')
+      .then(response => {
+        response.json()
+          .then(jsonr => document.getElementById('rumour').innerHTML = jsonr.body)
+      })
+      .catch(err => console.error(err))
+  </script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+.atf-main-header {
+  align-items: center;
+  color: black;
+  display: flex;
+  padding-bottom: 1rem;
+  padding-top: 0.5rem;
+  width: 100%;
+}
+
+.atf-main-header::before,
+.atf-main-header::after {
+  color: black;
+  content: "";
+  background:repeating-linear-gradient(45deg, currentColor 0 .1em);
+  flex: 1;
+  height: .2em;
+  margin: .2em;
+}
