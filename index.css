@@ -54,6 +54,30 @@ button {
   width: 100%;
 }
 
+.rumour-flex-container-offline {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.rumour-flex-container-offline p {
+  text-align: right;
+  width: 50vw;
+}
+
+.rumour-flex-container-offline::after {
+  content: "";
+  background: url('assets/allanaww.webp');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  opacity: 0.45;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+
 .rumour-element {
   flex: 1 0 100%;
   width: 100%;
@@ -84,5 +108,27 @@ button {
   }
   .footer-flex-container {
     font-size: 1rem;
+  }
+  .rumour-flex-container-offline {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .rumour-flex-container-offline::after {
+    content: "";
+    background: url('assets/allanwoo.webp');
+    background-repeat: repeat;
+    background-size: 50vw;
+    opacity: 0.35;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+  }
+  .rumour-flex-container-offline p {
+    color: #000000;
+    text-align: center;
   }
 }
