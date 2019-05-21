@@ -6,6 +6,14 @@
   min-height: 98vh;
 }
 
+.atf-offline-site {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.5rem;
+  min-height: 98vh;
+}
+
 .atf-page {
   display: flex;
   flex: 1;
