@@ -8,6 +8,8 @@ name: default
     from_secret: AWS_SECRET_ACCESS_KEY
   AWS_DEFAULT_REGION: eu-west-1
 
+steps:
+
 - name: s3-publish
   image: mesosphere/aws-cli:latest
   environment:
