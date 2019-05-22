@@ -15,7 +15,7 @@ steps:
   environment:
     <<: *environment-variables
   commands:
-    - s3 cp ./ s3://allthe.football/ --recursive --exclude "./infrastructure" --exclude "./LICENSE" --exclude ".gitignore" --exclude ".drone.yml"
+    - ls -la
   # when:
   #   branch:
   #     include:
