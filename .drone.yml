@@ -9,13 +9,12 @@ name: default
   AWS_DEFAULT_REGION: eu-west-1
 
 steps:
-
 - name: s3-publish
   image: mesosphere/aws-cli:latest
-  environment:
-    <<: *environment-variables
   commands:
     - ls -la
+  environment:
+    <<: *environment-variables
   # when:
   #   branch:
   #     include:
