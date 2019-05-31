@@ -15,6 +15,7 @@
 <body class='atf-site'>
 
   <header class='atf-main-header'>All The Football</header>
+  <!-- <script type="text/javascript">let rumours = ['All The Football.']</script> -->
   <main class='atf-page'>
     <div class='rumour-flex-container'>
       <p id='rumour' class='rumour-element'>Consulting reliable sources...</p>
@@ -22,46 +23,34 @@
     </div>
   </main>
 
-  <footer>
+  <footer class='rumour-bar-wrap'>
     <div class='rumour-bar'>
-      <div class='rumour-text'>All The Football</div>
+      <div id='rumour-scrollbar' class='rumour-bar-item'>All The Football</div>
     </div>
     <!-- <div class='footer-element'>v0.0.1<span class='version-description'> - early beta</span></div>
     <div class='footer-element'>Copyright (c) 2019 Nick Holvast</div>
     <div class='footer-element'><a href='https://github.com/aNerdInTheHand/allthefootball/issues' target='_blank' rel='noopener noreferrer'>Report a bug</a></div> -->
   </footer>
 
-  <script type="text/javascript">
-    function getRumour () {
-      fetch('https://5u4qqqhcm5.execute-api.eu-west-1.amazonaws.com/beta/rumour')
-        .then(response => {
-          response.json()
-            .then(jsonr => document.getElementById('rumour').innerHTML = JSON.parse(jsonr.body).replace(/"/g, "'"))
-        })
-        .catch(err => console.error(err))
-      };
-    (function () {
-      getRumour()
-    })()
-  </script>
+  <script type="text/javascript" src="assets/main.js"></script>
   <script>
     WebFontConfig = {google: {families: ['Maiden Orange','Stylish']}};
     (function(d) {
-        var wf = d.createElement('script'), s = d.scripts[0]
-        wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
-          '://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js'
-        wf.type = 'text/javascript'
-        wf.async = 'true'
-        var s = document.getElementsByTagName('script')[0]
-        s.parentNode.insertBefore(wf, s)
-        })(document)
-    </script>
-    <script>
-      if('serviceWorker' in navigator) {
-        navigator.serviceWorker
-          .register('/sw.js')
-          .then(function() { console.log("Service Worker Registered") })
-      }
-    </script>
+      var wf = d.createElement('script'), s = d.scripts[0]
+      wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+        '://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js'
+      wf.type = 'text/javascript'
+      wf.async = 'true'
+      var s = document.getElementsByTagName('script')[0]
+      s.parentNode.insertBefore(wf, s)
+    })(document)
+  </script>
+  <script>
+    if('serviceWorker' in navigator) {
+      navigator.serviceWorker
+        .register('/sw.js')
+        .then(function() { console.log("Service Worker Registered") })
+    }
+  </script>
 </body>
 </html>
