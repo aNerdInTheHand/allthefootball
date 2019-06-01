@@ -1,14 +1,14 @@
-function getRumour () {
-  fetch('https://5u4qqqhcm5.execute-api.eu-west-1.amazonaws.com/beta/rumour')
-    .then(response => {
-      response.json()
-        .then(jsonr => document.getElementById('rumour').innerHTML = JSON.parse(jsonr.body).replace(/"/g, "'"))
-    })
-    .catch(err => console.error(err))
-  };
-(function () {
-  getRumour()
-})()
+// function getRumour () {
+//   fetch('https://5u4qqqhcm5.execute-api.eu-west-1.amazonaws.com/beta/rumour')
+//     .then(response => {
+//       response.json()
+//         .then(jsonr => document.getElementById('rumour').innerHTML = JSON.parse(jsonr.body).replace(/"/g, "'"))
+//     })
+//     .catch(err => console.error(err))
+//   };
+// (function () {
+//   getRumour()
+// })()
 
 WebFontConfig = {google: {families: ['Maiden Orange','Stylish']}};
 (function(d) {
@@ -21,8 +21,8 @@ WebFontConfig = {google: {families: ['Maiden Orange','Stylish']}};
   s.parentNode.insertBefore(wf, s)
   })(document)
 
-if('serviceWorker' in navigator) {
-  navigator.serviceWorker
-    .register('/sw.js')
-    .then(function() { console.log("Service Worker Registered") })
-}
+// if('serviceWorker' in navigator) {
+//   navigator.serviceWorker
+//     .register('/sw.js')
+//     .then(function() { console.log("Service Worker Registered") })
+// }

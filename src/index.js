@@ -1,8 +1,8 @@
 const m = require('mithril')
-const header = require('./views/Header')
+const app = require('./AppWrapper')
 
 m.route(document.body, '/', {
-  '/': header
+  '/': app
 })
 
   {/* <header class='atf-main-header'>All The Football</header>
