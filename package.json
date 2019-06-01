@@ -1,0 +1,23 @@
+{
+  "name": "allthefootball",
+  "version": "1.0.0",
+  "description": "Daft football rumour generating website",
+  "main": "src/index.js",
+  "scripts": {
+    "build": "bundle src/index.js --output bin/app.js --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aNerdInTheHand/allthefootball.git"
+  },
+  "author": "Nick Holvast",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aNerdInTheHand/allthefootball/issues"
+  },
+  "homepage": "https://github.com/aNerdInTheHand/allthefootball#readme",
+  "dependencies": {
+    "mithril": "^2.0.0-rc.6"
+  }
+}
