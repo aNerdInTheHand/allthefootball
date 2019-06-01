@@ -98,11 +98,13 @@ button {
 .footer-flex-container {
   align-items: center;
   border-top: 1px solid black;
-  background-color: #eaeff7;
-  padding-bottom: 1rem;
-  padding-top: 1rem;
+  /* background-color: #eaeff7; */
+  background-color: #10073d;
+  color: #88f24f;
   display: flex;
   justify-content: center;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
 }
 
 .footer-element {
@@ -111,9 +113,6 @@ button {
 }
 
 @media only screen and (max-width: 600px) {
-  .version-description {
-    display: none;
-  }
   .footer-flex-container {
     font-size: 1rem;
   }
