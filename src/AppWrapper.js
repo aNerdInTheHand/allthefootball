@@ -1,3 +1,5 @@
+'use strict';
+
 const m = require('mithril')
 const Header = require('./views/Header')
 const Footer = require('./views/Footer')

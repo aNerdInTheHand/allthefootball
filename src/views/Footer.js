@@ -1,3 +1,5 @@
+'use strict';
+
 const m = require('mithril')
 
 module.exports = {
