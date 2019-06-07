@@ -21,8 +21,8 @@ WebFontConfig = {google: {families: ['Maiden Orange','Stylish']}};
   s.parentNode.insertBefore(wf, s)
   })(document)
 
-// if('serviceWorker' in navigator) {
-//   navigator.serviceWorker
-//     .register('/sw.js')
-//     .then(function() { console.log("Service Worker Registered") })
-// }
+if('serviceWorker' in navigator) {
+  navigator.serviceWorker
+    .register('/sw.js')
+    .then(function() { console.log("Service Worker Registered") })
+}

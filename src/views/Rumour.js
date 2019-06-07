@@ -6,7 +6,6 @@ const Rumour = {
     return m.request({
       method: 'GET',
       url: 'https://5u4qqqhcm5.execute-api.eu-west-1.amazonaws.com/beta/rumour'
-      // extract: function(xhr) {return {status: xhr.status, body: xhr.responseText}}
     })
     .then(response => {
       Rumour.text = JSON.parse(response.body).replace(/"/g, "'")
