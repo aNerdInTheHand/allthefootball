@@ -1,4 +1,4 @@
-const cacheName = 'test3'
+const cacheName = '0.0.1'
 const contentToCache = [
   '/index.css',
   '/offline.html',
